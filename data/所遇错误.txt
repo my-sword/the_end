@@ -1,0 +1,64 @@
+﻿2.13(失败)
+为了保密，将json存储为二进制
+json不能转化为中文 \xee编码和中文编码的转化
+with open('test.json', 'rb') as json_file:#因为二进制不能用编码读取
+    a=json_file.read()
+    s1 = a.decode('gb2312')#\xd7\xd4\xb6文件需要用'gb2312'转化
+
+dump:  将数据写入json文件中  json.dump(new_dict,f)
+dumps：将 字典 转换为 字符串
+load:  把文件打开，并把字符串变换为数据类型
+loads: 将 字符串 转换为 字典  json.loads(json_str)
+
+但python不能以二进制写入文件
+
+2.13(成功)
+log4cplus:ERROR No appenders could be found for logger (AdSyncNamespace).
+log4cplus:ERROR Please initialize the log4cplus system properly.
+卸载autodesk360
+
+2.13(成功)
+pycharm运行程序时在Python console窗口中运行
+解决方法：打开菜单栏run->edit configurations->run with python console，复选框取消就可以了。
+
+2.13(成功)
+问题：鼠标移动窗口事件，不能用event.x_root-event.x
+原因：若有边框，移动时会出现负值，反方向叠加不见；若无边框，就不移动：因为event.x在变
+解决：需要固定坐标，用鼠标单击事件xy赋予设置全局变量,global x,y调用event.x_root-x
+
+
+2.13()
+在anaconda页面上找不到第三方库
+anaconda 安装第三方库：在Anaconda3\Scripts 的路径上输入‘cmd’ pip install pyautogui
+
+2.14()
+最小化和窗口前置、被关闭前、最大化需要用到win32gui
+复杂
+
+2.14()
+两个窗口循环之间的矛盾
+思路：去掉新窗口或者总是最前去掉
+
+2.15(解决)
+组件存在覆盖现象，若被覆盖，鼠标则不属于该组件区域
+问题：显示问题
+解决：放弃
+
+2.15(失败)
+自定义形状控件
+tkinter组件不行，画布canvas似乎也不行
+
+2.16(成功)
+问题：菜单按钮响应背景颜色不可更改
+解决：使用标签触发 窗口菜单事件
+
+2.16()
+出现BUG:只要记住密码  关闭软件 下次打开就会
+
+ValueError: shape mismatch: objects cannot be broadcast to a single shape
+数组长度或类型不一致
+
+3.6
+w3_txttocsv() missing 1 required positional argument: 'self'
+解决需要实例化
+w2_w2=w2_datahandle()#实例化
